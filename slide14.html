@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>時間のしくみ - スライド13</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            color: #333;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+
+            background-color: white;
+            padding: 40px 60px;
+        }
+        .section-title {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #e67e22;
+            margin-bottom: 20px;
+        }
+        .intro-text {
+            font-size: 1.2rem;
+            line-height: 1.5;
+            margin-bottom: 25px;
+            color: #555;
+        }
+        .highlight-quote {
+            font-style: italic;
+            background-color: rgba(230, 126, 34, 0.08);
+            padding: 15px;
+            border-left: 4px solid #e67e22;
+            margin: 20px 0;
+        }
+        .concept-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-top: 30px;
+        }
+        .concept-card {
+            background: linear-gradient(to right, #fff9f4, #fff);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            position: relative;
+            transition: transform 0.3s;
+        }
+        .concept-card:hover {
+            transform: translateY(-5px);
+        }
+        .concept-icon {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 2.2rem;
+            color: rgba(230, 126, 34, 0.2);
+        }
+        .concept-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #e67e22;
+            margin-bottom: 12px;
+        }
+        .concept-text {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #555;
+        }
+        .comparison-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 15px;
+        }
+        .comparison-item {
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+        .past-concept {
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+        }
+        .new-concept {
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+        }
+        .mechanism-box {
+            background: linear-gradient(to right, #fff9f4, #fff);
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .mechanism-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #e67e22;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .mechanism-title i {
+            margin-right: 12px;
+        }
+        .mechanism-steps {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .mechanism-step {
+            text-align: center;
+            position: relative;
+            width: 200px;
+        }
+        .step-arrow {
+            position: absolute;
+            top: 30%;
+            right: -30px;
+            font-size: 1.5rem;
+            color: #e67e22;
+        }
+        .mechanism-step:last-child .step-arrow {
+            display: none;
+        }
+        .step-circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: rgba(230, 126, 34, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            border: 2px solid rgba(230, 126, 34, 0.3);
+        }
+        .step-circle i {
+            font-size: 2rem;
+            color: #e67e22;
+        }
+        .step-text {
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <h1 class="section-title">12. あなたの過去の物語を変える：「今」から「過去を変える」</h1>
+        
+        <p class="intro-text">過去は固定されたものではなく、現在の視点から常に新しく作り直せる可能性に満ちています</p>
+        
+        <div class="concept-grid">
+            <div class="concept-card">
+                <i class="fas fa-history concept-icon"></i>
+                <h2 class="concept-title">過去は変わりやすい</h2>
+                <p class="concept-text">
+                    「過去は、実は現在の瞬間から作られる」という革命的な考え方。過去は決まって変わらない記録ではなく、現在の信じていることや心の状態によって常に新しく作り直され、解釈し直される、流れ動くエネルギーのパターンです。
+                </p>
+                <div class="highlight-quote">
+                    「あなたが自分自身を変える時はいつでも、時間の流れ全体をさかのぼって全てを変えることになる。なぜなら、今日のあなたになるために何が起こったのかが、一直線につながるように意味を持たなければならないからだ。」
+                </div>
+            </div>
+            
+            <div class="concept-card">
+                <i class="fas fa-sync-alt concept-icon"></i>
+                <h2 class="concept-title">実際に過去を新しく作り直す</h2>
+                <p class="concept-text">
+                    もし過去の辛い経験にまだ影響されているなら、それは「毎瞬、現在の自分においてそれを新しく作り直している」証拠です。本当の変化とは、「あなたはそれに全く影響されなくなる」状態です。これは出来事自体を否定するのではなく、その出来事からの学びを完全に受け入れ、新しい自分の一部としたことを意味します。
+                </p>
+                
+                <div class="comparison-box">
+                    <div class="comparison-item past-concept">
+                        <i class="fas fa-thumbs-down"></i> 「あの出来事が私を傷つけた」
+                    </div>
+                    <div class="comparison-item new-concept">
+                        <i class="fas fa-thumbs-up"></i> 「あの経験が私を強くした」
+                    </div>
+                </div>
+            </div>
+            
+            <div class="concept-card">
+                <i class="fas fa-brain concept-icon"></i>
+                <h2 class="concept-title">辛い経験（トラウマ）を解釈し直す</h2>
+                <p class="concept-text">
+                    辛い過去の経験は、現在の視点から新しい意味を与えることで変容します。これは出来事そのものを否定するのではなく、その経験から得た学びや成長に焦点を当て、過去の出来事を新しい文脈で理解し直すことです。新しい解釈を通じて、過去の痛みや恐れからの解放が可能になります。
+                </p>
+            </div>
+            
+            <div class="concept-card">
+                <i class="fas fa-fingerprint concept-icon"></i>
+                <h2 class="concept-title">自分らしさ（アイデンティティ）を変える</h2>
+                <p class="concept-text">
+                    「過去の自分」という考え方は、現在の自分認識に基づいた作りものです。現在の自分認識を根本的に変えることで、過去の出来事がもはや「あなたに起こったこと」ではなくなります。これは自分を定義する物語を書き換える作業であり、新しいアイデンティティが新しい過去を創造します。
+                </p>
+            </div>
+        </div>
+        
+        <div class="mechanism-box">
+            <h2 class="mechanism-title"><i class="fas fa-cogs"></i>過去が変わる仕組み</h2>
+            <p class="concept-text">
+                現在の「今」において信じていることや心の状態を変えることで、新しい現在の自分と一致する、違う「過去」のコマ（フレーム）を選ぶことが可能になります。これは物理的に時間を操作するのではなく、あなたの心によるパラレルワールドの冒険です。
+            </p>
+            
+            <div class="mechanism-steps">
+                <div class="mechanism-step">
+                    <div class="step-circle">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <p class="step-text"><strong>現在の意識</strong><br>現在の心の状態と信念</p>
+                    <span class="step-arrow"><i class="fas fa-chevron-right"></i></span>
+                </div>
+                <div class="mechanism-step">
+                    <div class="step-circle">
+                        <i class="fas fa-wave-square"></i>
+                    </div>
+                    <p class="step-text"><strong>心の状態の変化</strong><br>意識と振動周波数の変容</p>
+                    <span class="step-arrow"><i class="fas fa-chevron-right"></i></span>
+                </div>
+                <div class="mechanism-step">
+                    <div class="step-circle">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <p class="step-text"><strong>新しい過去の選択</strong><br>異なる過去のコマ（フレーム）</p>
+                    <span class="step-arrow"><i class="fas fa-chevron-right"></i></span>
+                </div>
+                <div class="mechanism-step">
+                    <div class="step-circle">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <p class="step-text"><strong>異なる現実の体験</strong><br>新しい過去を持つ世界へ</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

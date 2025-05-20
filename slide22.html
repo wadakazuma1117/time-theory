@@ -1,0 +1,302 @@
+<html lang="ja"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>時間のしくみ - スライド22</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            color: #333;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+
+            background-color: white;
+            padding: 40px 60px;
+        }
+        .section-title {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        .subtitle {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #555;
+            margin-bottom: 30px;
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+        }
+        .time-section {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 25px;
+        }
+        .time-block {
+            flex: 1;
+            background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(249,249,249,1) 100%);
+            border-radius: 15px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            padding: 25px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+        .time-block:hover {
+            transform: translateY(-3px);
+        }
+        .block-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .block-icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-right: 15px;
+            font-size: 1.8rem;
+            background: white;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+        }
+        .block-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        .method-list {
+            padding: 0;
+            list-style-type: none;
+        }
+        .method-item {
+            margin-bottom: 12px;
+            padding: 10px 15px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.04);
+            display: flex;
+        }
+        .method-item-icon {
+            color: #3498db;
+            font-size: 1.1rem;
+            margin-right: 10px;
+            margin-top: 2px;
+        }
+        .method-content {
+            flex: 1;
+        }
+        .method-title {
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: #2c3e50;
+            margin-bottom: 3px;
+        }
+        .method-desc {
+            font-size: 0.9rem;
+            color: #555;
+        }
+        .flow-icon { color: #9b59b6; }
+        .fast-icon { color: #e74c3c; }
+        .slow-icon { color: #2ecc71; }
+        .relation-icon { color: #f39c12; }
+        
+        .practical-banner {
+            background: linear-gradient(45deg, #f6f9fc, #eef5fe);
+            border-radius: 12px;
+            padding: 20px 25px;
+            margin-top: 20px;
+            border-left: 5px solid #3498db;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+        }
+        .banner-icon {
+            font-size: 2.2rem;
+            color: #3498db;
+            margin-right: 20px;
+        }
+        .banner-content {
+            flex: 1;
+        }
+        .banner-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #2980b9;
+        }
+        .banner-text {
+            font-size: 0.95rem;
+            color: #444;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <h1 class="section-title">20. 内なる時間の歪みを活用する</h1>
+        <p class="subtitle">心の状態によって変わる時間の感じ方を意識的に活用する</p>
+        
+        <div class="time-section">
+            <!-- フロー状態の活用法 -->
+            <div class="time-block">
+                <div class="block-header">
+                    <div class="block-icon">
+                        <i class="fas fa-water flow-icon"></i>
+                    </div>
+                    <h3 class="block-title">フロー状態の活用法</h3>
+                </div>
+                <p style="font-size: 0.95rem; margin-bottom: 15px;">時間が消えるような没入体験を意識的に作り出す</p>
+                <ul class="method-list">
+                    <li class="method-item">
+                        <span class="method-item-icon"><i class="fas fa-balance-scale"></i></span>
+                        <div class="method-content">
+                            <div class="method-title">スキルと挑戦のバランス</div>
+                            <div class="method-desc">あなたのスキルに対して少し挑戦的な活動を選ぶことで、フロー状態が生まれやすくなります</div>
+                        </div>
+                    </li>
+                    <li class="method-item">
+                        <span class="method-item-icon"><i class="fas fa-bullseye"></i></span>
+                        <div class="method-content">
+                            <div class="method-title">明確な目標と即時フィードバック</div>
+                            <div class="method-desc">進捗を常に確認できる明確な目標を設定し、没入感を高める</div>
+                        </div>
+                    </li>
+                    <li class="method-item">
+                        <span class="method-item-icon"><i class="fas fa-laptop-house"></i></span>
+                        <div class="method-content">
+                            <div class="method-title">没入のための環境デザイン</div>
+                            <div class="method-desc">通知をオフにする、集中のための適切な音楽を流す、視覚的な集中空間を作る</div>
+                        </div>
+                    </li>
+                </ul>
+                <p style="font-style: italic; color: #666; margin-top: 15px; font-size: 0.9rem;">「フロー状態では、時間の感覚が変化し、数時間が数分のように感じられます」</p>
+            </div>
+            
+            <!-- 時間が速く感じられる状態の活用 -->
+            <div class="time-block">
+                <div class="block-header">
+                    <div class="block-icon">
+                        <i class="fas fa-forward fast-icon"></i>
+                    </div>
+                    <h3 class="block-title">時間が速く感じられる状態の活用</h3>
+                </div>
+                <p style="font-size: 0.95rem; margin-bottom: 15px;">必要な時に時間の感覚を加速させる方法</p>
+                <ul class="method-list">
+                    <li class="method-item">
+                        <span class="method-item-icon"><i class="fas fa-sync-alt"></i></span>
+                        <div class="method-content">
+                            <div class="method-title">自動化と習慣化</div>
+                            <div class="method-desc">単調な必要作業を習慣化し、自動的に行えるようにすることで時間感覚が短縮される</div>
+                        </div>
+                    </li>
+                    <li class="method-item">
+                        <span class="method-item-icon"><i class="fas fa-th-large"></i></span>
+                        <div class="method-content">
+                            <div class="method-title">「チャンク化」の活用</div>
+                            <div class="method-desc">大きな時間の塊を小さな単位に分割し、各単位に具体的な目標を設定する</div>
+                        </div>
+                    </li>
+                    <li class="method-item">
+                        <span class="method-item-icon"><i class="fas fa-music"></i></span>
+                        <div class="method-content">
+                            <div class="method-title">集中と没入のトリガー</div>
+                            <div class="method-desc">特定の音楽、香り、動作などを集中状態のトリガーとして使用する</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="time-section">
+            <!-- 時間がゆっくり感じられる状態の活用 -->
+            <div class="time-block">
+                <div class="block-header">
+                    <div class="block-icon">
+                        <i class="fas fa-hourglass-half slow-icon"></i>
+                    </div>
+                    <h3 class="block-title">時間がゆっくり感じられる状態の活用</h3>
+                </div>
+                <p style="font-size: 0.95rem; margin-bottom: 15px;">瞬間を拡張して体験を豊かにする方法</p>
+                <ul class="method-list">
+                    <li class="method-item">
+                        <span class="method-item-icon"><i class="fas fa-star"></i></span>
+                        <div class="method-content">
+                            <div class="method-title">新しい体験を意識的に取り入れる</div>
+                            <div class="method-desc">新しい環境や活動は脳が詳細に処理するため、時間がゆっくり感じられる</div>
+                        </div>
+                    </li>
+                    <li class="method-item">
+                        <span class="method-item-icon"><i class="fas fa-eye"></i></span>
+                        <div class="method-content">
+                            <div class="method-title">意識的な観察法</div>
+                            <div class="method-desc">通常見過ごしてしまう環境の細部に注意を向け、意識的に観察する習慣をつける</div>
+                        </div>
+                    </li>
+                    <li class="method-item">
+                        <span class="method-item-icon"><i class="fas fa-heartbeat"></i></span>
+                        <div class="method-content">
+                            <div class="method-title">五感への深い気づき</div>
+                            <div class="method-desc">感覚体験を意図的に拡張し、体験の質を豊かにする</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- 心の状態と時間の関係性の応用 -->
+            <div class="time-block">
+                <div class="block-header">
+                    <div class="block-icon">
+                        <i class="fas fa-brain relation-icon"></i>
+                    </div>
+                    <h3 class="block-title">心の状態と時間の関係性の応用</h3>
+                </div>
+                <p style="font-size: 0.95rem; margin-bottom: 15px;">日常生活での実践的な活用法</p>
+                <ul class="method-list">
+                    <li class="method-item">
+                        <span class="method-item-icon"><i class="fas fa-user-clock"></i></span>
+                        <div class="method-content">
+                            <div class="method-title">時間タイプの自己理解</div>
+                            <div class="method-desc">自分が「時間を拡張して感じる活動」と「時間を短縮して感じる活動」を知り、スケジュールに組み込む</div>
+                        </div>
+                    </li>
+                    <li class="method-item">
+                        <span class="method-item-icon"><i class="fas fa-chart-line"></i></span>
+                        <div class="method-content">
+                            <div class="method-title">生産性の波を活用</div>
+                            <div class="method-desc">エネルギーと集中力の高い時間帯に重要な作業をスケジュールする</div>
+                        </div>
+                    </li>
+                    <li class="method-item">
+                        <span class="method-item-icon"><i class="fas fa-hand-sparkles"></i></span>
+                        <div class="method-content">
+                            <div class="method-title">意識的な感情管理</div>
+                            <div class="method-desc">ポジティブな感情状態を意図的に作り出し、時間体験を変容させる</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="practical-banner">
+            <div class="banner-icon">
+                <i class="fas fa-lightbulb"></i>
+            </div>
+            <div class="banner-content">
+                <h3 class="banner-title">主観的な時間体験を活用する</h3>
+                <p class="banner-text">客観的な時間（時計で測る時間）よりも、主観的な時間（心で感じる時間）をコントロールすることで、私たちはより効果的に時間を活用し、より豊かな体験を得ることができます。時間の感じ方を意識的に調整することは、人生の質を高める重要な実践なのです。</p>
+            </div>
+        </div>
+    </div>
+
+    </body></html>

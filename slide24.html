@@ -1,0 +1,336 @@
+<html lang="ja"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>時間のしくみ - スライド24</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            color: #333;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+
+            background-color: white;
+            padding: 40px 60px;
+        }
+        .section-title {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        .subtitle {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #555;
+            margin-bottom: 30px;
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+        }
+        .content-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 20px;
+        }
+        .content-card {
+            background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(249,249,249,1) 100%);
+            border-radius: 15px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            padding: 25px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .content-card:first-child {
+            border-top: 4px solid #3498db;
+        }
+        .content-card:nth-child(2) {
+            border-top: 4px solid #9b59b6;
+        }
+        .content-card:nth-child(3) {
+            border-top: 4px solid #2ecc71;
+        }
+        .content-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .card-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        .card-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            flex-shrink: 0;
+            font-size: 1.2rem;
+            color: white;
+        }
+        .card-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 5px;
+        }
+        .item {
+            background-color: rgba(52, 152, 219, 0.1);
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            line-height: 1.3;
+        }
+        .item i {
+            margin-right: 8px;
+            font-size: 0.9rem;
+        }
+        .journey-container {
+            margin-top: 25px;
+            background: linear-gradient(135deg, #f6f9fc 0%, #eef5fe 100%);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            position: relative;
+        }
+        .journey-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .journey-title i {
+            margin-right: 10px;
+            color: #3498db;
+        }
+        .journey-steps {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+            position: relative;
+            z-index: 2;
+        }
+        .journey-steps::before {
+            content: "";
+            position: absolute;
+            height: 3px;
+            background: linear-gradient(90deg, #3498db, #9b59b6, #2ecc71);
+            top: 30px;
+            left: 50px;
+            right: 50px;
+            z-index: -1;
+        }
+        .journey-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100px;
+        }
+        .step-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            border: 3px solid;
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+            position: relative;
+            z-index: 2;
+            transition: all 0.3s ease;
+        }
+        .step-icon:hover {
+            transform: scale(1.1);
+        }
+        .step-text {
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        .step-1 .step-icon {
+            border-color: #3498db;
+            color: #3498db;
+        }
+        .step-2 .step-icon {
+            border-color: #9b59b6;
+            color: #9b59b6;
+        }
+        .step-3 .step-icon {
+            border-color: #2ecc71;
+            color: #2ecc71;
+        }
+        .step-4 .step-icon {
+            border-color: #e74c3c;
+            color: #e74c3c;
+        }
+        .step-5 .step-icon {
+            border-color: #f39c12;
+            color: #f39c12;
+        }
+        .step-6 .step-icon {
+            border-color: #16a085;
+            color: #16a085;
+        }
+        .final-quote {
+            font-size: 1.1rem;
+            font-style: italic;
+            text-align: center;
+            color: #555;
+            margin-top: 25px;
+            padding: 15px 40px;
+            line-height: 1.6;
+            border-radius: 8px;
+            background-color: rgba(52, 152, 219, 0.05);
+            position: relative;
+        }
+        .final-quote::before, .final-quote::after {
+            content: '"';
+            font-size: 3rem;
+            position: absolute;
+            opacity: 0.2;
+            font-family: Georgia, serif;
+        }
+        .final-quote::before {
+            top: -10px;
+            left: 10px;
+        }
+        .final-quote::after {
+            bottom: -40px;
+            right: 10px;
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <h1 class="section-title">22. 最後に：時間の旅を続けるあなたへ</h1>
+        <p class="subtitle">時間という「思い込み」の探求が、あなたの人生に無限の可能性をもたらします</p>
+        
+        <div class="content-container">
+            <!-- 時間の探究が教えてくれたもの -->
+            <div class="content-card">
+                <div class="card-title">
+                    <div class="card-icon" style="background-color: #3498db;"><i class="fas fa-lightbulb"></i></div>
+                    <div>時間の探究が教えてくれたもの</div>
+                </div>
+                <div class="card-items">
+                    <div class="item"><i class="fas fa-infinity"></i>永遠の「今」</div>
+                    <div class="item"><i class="fas fa-globe"></i>パラレルワールド</div>
+                    <div class="item"><i class="fas fa-brain"></i>心が創る現実</div>
+                    <div class="item"><i class="fas fa-history"></i>過去の書き換え</div>
+                    <div class="item"><i class="fas fa-hourglass-half"></i>時間の思い込み</div>
+                </div>
+            </div>
+            
+            <!-- 日々の実践のための心構え -->
+            <div class="content-card">
+                <div class="card-title">
+                    <div class="card-icon" style="background-color: #9b59b6;"><i class="fas fa-hand-holding-heart"></i></div>
+                    <div>日々の実践のための心構え</div>
+                </div>
+                <div class="card-items">
+                    <div class="item"><i class="fas fa-sun"></i>今この瞬間に完全に存在する</div>
+                    <div class="item"><i class="fas fa-sliders-h"></i>心の状態を意識的に選ぶ</div>
+                    <div class="item"><i class="fas fa-unlock"></i>制限の思い込みを手放す</div>
+                    <div class="item"><i class="fas fa-fire"></i>興奮と情熱に従う</div>
+                    <div class="item"><i class="fas fa-feather"></i>結果への執着を手放す</div>
+                </div>
+            </div>
+            
+            <!-- 時間の旅の続き -->
+            <div class="content-card">
+                <div class="card-title">
+                    <div class="card-icon" style="background-color: #2ecc71;"><i class="fas fa-compass"></i></div>
+                    <div>時間の旅の続き</div>
+                </div>
+                <div class="card-items" style="margin-top: 20px;">
+                    <div class="item"><i class="fas fa-eye"></i>気づき</div>
+                    <div class="item"><i class="fas fa-walking"></i>実践</div>
+                    <div class="item"><i class="fas fa-expand-arrows-alt"></i>拡大</div>
+                    <div class="item"><i class="fas fa-share-alt"></i>共有</div>
+                    <div class="item"><i class="fas fa-seedling"></i>進化</div>
+                    <div class="item"><i class="fas fa-infinity"></i>無限</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 時間の旅 -->
+        <div class="journey-container">
+            <div class="journey-title">
+                <i class="fas fa-route fa-lg"></i>
+                <span>時間の旅の続き</span>
+            </div>
+            <div class="journey-steps">
+                <div class="journey-step step-1">
+                    <div class="step-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <div class="step-text">気づき</div>
+                </div>
+                
+                <div class="journey-step step-2">
+                    <div class="step-icon">
+                        <i class="fas fa-walking"></i>
+                    </div>
+                    <div class="step-text">実践</div>
+                </div>
+                
+                <div class="journey-step step-3">
+                    <div class="step-icon">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </div>
+                    <div class="step-text">拡大</div>
+                </div>
+                
+                <div class="journey-step step-4">
+                    <div class="step-icon">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <div class="step-text">共有</div>
+                </div>
+                
+                <div class="journey-step step-5">
+                    <div class="step-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <div class="step-text">進化</div>
+                </div>
+                
+                <div class="journey-step step-6">
+                    <div class="step-icon">
+                        <i class="fas fa-infinity"></i>
+                    </div>
+                    <div class="step-text">無限</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="final-quote">
+            「時間の幻想を超えたところに、本当のあなたがいます。永遠の「今」の中で、あなたは無限の可能性と共に自由に創造する存在なのです。」
+        </div>
+    </div>
+
+    </body></html>

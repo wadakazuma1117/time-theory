@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>時間のしくみ - スライド2</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            color: #333;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+
+            background-color: white;
+            padding: 40px 60px;
+        }
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #3182ce;
+            margin-bottom: 20px;
+        }
+        .intro-text {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 90%;
+            line-height: 1.6;
+        }
+        .question-box {
+            background-color: #f8fafc;
+            border-left: 5px solid #4299e1;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 0 8px 8px 0;
+        }
+        .question {
+            font-weight: 600;
+            color: #2c5282;
+            font-size: 1.1rem;
+        }
+        .answer {
+            font-size: 1rem;
+            color: #4a5568;
+            margin-top: 5px;
+        }
+        .time-faces {
+            display: flex;
+            justify-content: space-around;
+            margin: 25px 0;
+        }
+        .time-face {
+            text-align: center;
+            width: 45%;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: #f0f5ff;
+        }
+        .time-face-icon {
+            font-size: 2rem;
+            color: #4299e1;
+            margin-bottom: 10px;
+        }
+        .time-face-title {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #2c5282;
+        }
+        .time-face-desc {
+            font-size: 0.9rem;
+            color: #4a5568;
+        }
+        .life-time {
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .life-time-title {
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: #2c5282;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .perspectives {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        .perspective {
+            width: 23%;
+            text-align: center;
+            padding: 10px;
+        }
+        .perspective-icon {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        .perspective-title {
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+        .perspective-desc {
+            font-size: 0.8rem;
+            color: #4a5568;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <h1 class="section-title">1. はじめに: 時間のふしぎと基本的な考え方</h1>
+        
+        <p class="intro-text">昔から、人は「時間」という不思議な概念に魅了され続けてきました。それは私たちの存在と切り離せないものであり、時に「命そのもの」とさえ感じられます。</p>
+        
+        <div class="grid grid-cols-2 gap-8">
+            <div>
+                <h3 class="text-xl font-semibold mb-4 text-blue-700">なぜ人は時間にひかれるのか</h3>
+                
+                <div class="question-box">
+                    <div class="question">時間ってなんだろう？</div>
+                    <div class="answer">私たちが感じる時間の流れは、本当に実在するものなのでしょうか？</div>
+                </div>
+                
+                <div class="question-box">
+                    <div class="question">どうして時間は流れるの？</div>
+                    <div class="answer">過去から未来へと一方向に進むように感じるのはなぜでしょうか？</div>
+                </div>
+                
+                <div class="question-box">
+                    <div class="question">時間と人生はどう関係する？</div>
+                    <div class="answer">私たちの存在意義や生きる意味と時間はどう繋がっているのでしょうか？</div>
+                </div>
+                
+                <div class="question-box">
+                    <div class="question">時間は絶対的？相対的？</div>
+                    <div class="answer">時間は誰にとっても同じように存在するのか、それとも人によって違うものなのでしょうか？</div>
+                </div>
+            </div>
+            
+            <div>
+                <h3 class="text-xl font-semibold mb-4 text-blue-700">時間の２つの顔</h3>
+                
+                <div class="time-faces">
+                    <div class="time-face">
+                        <div class="time-face-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="time-face-title">時計で測れる時間</div>
+                        <div class="time-face-desc">物理的な測定が可能で、誰にとっても同じように進む客観的な時間</div>
+                    </div>
+                    
+                    <div class="time-face">
+                        <div class="time-face-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="time-face-title">心で感じる時間</div>
+                        <div class="time-face-desc">主観的で、楽しい時は短く、退屈な時は長く感じる心理的な時間</div>
+                    </div>
+                </div>
+                
+                <div class="life-time">
+                    <div class="life-time-title">
+                        <i class="fas fa-infinity mr-2 text-blue-500"></i>
+                        「命そのもの」としての時間
+                    </div>
+                    <p class="text-sm">時間はただの数字ではなく、まるで「命そのもの」のように、私たちの生きる意味の中心にあります。</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="perspectives">
+            <div class="perspective">
+                <div class="perspective-icon text-red-500">
+                    <i class="fas fa-atom"></i>
+                </div>
+                <div class="perspective-title">科学の目で見る時間</div>
+                <div class="perspective-desc">相対性理論、量子論、エントロピー増大の法則など、科学的視点から時間を理解する試み</div>
+            </div>
+            
+            <div class="perspective">
+                <div class="perspective-icon text-purple-500">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <div class="perspective-title">哲学の目で見る時間</div>
+                <div class="perspective-desc">永遠主義、現在主義など、時間の本質的な存在を問う深遠な哲学的考察</div>
+            </div>
+            
+            <div class="perspective">
+                <div class="perspective-icon text-green-500">
+                    <i class="fas fa-spa"></i>
+                </div>
+                <div class="perspective-title">心の目で見る時間</div>
+                <div class="perspective-desc">生まれ変わりや永遠の概念、一瞬のなかの永遠など、精神的・宗教的視点</div>
+            </div>
+            
+            <div class="perspective">
+                <div class="perspective-icon text-blue-500">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <div class="perspective-title">新しい時間の見方</div>
+                <div class="perspective-desc">時間があなたの心によって映し出される「思い込み」かもしれないという革新的視点</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

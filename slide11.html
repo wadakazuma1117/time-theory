@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>時間のしくみ - スライド10</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            color: #333;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+
+            background-color: white;
+            padding: 40px 60px;
+        }
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2e7d32;
+            margin-bottom: 30px;
+        }
+        .intro-text {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+        .philosophy-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 25px;
+        }
+        .philosophy-card {
+            padding: 20px;
+            border-radius: 12px;
+            background: #fff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            position: relative;
+        }
+        .philosophy-card.eternalism {
+            background: linear-gradient(to bottom right, #e8f5e9, #ffffff);
+            border-left: 5px solid #2e7d32;
+        }
+        .philosophy-card.idealism {
+            background: linear-gradient(to bottom right, #e3f2fd, #ffffff);
+            border-left: 5px solid #1565c0;
+        }
+        .philosophy-card.fatalism {
+            background: linear-gradient(to bottom right, #fff3e0, #ffffff);
+            border-left: 5px solid #ff9800;
+        }
+        .philosophy-card.frameworks {
+            background: linear-gradient(to bottom right, #f3e5f5, #ffffff);
+            border-left: 5px solid #7b1fa2;
+        }
+        .philosophy-icon {
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .icon-eternalism {
+            background-color: #2e7d32;
+        }
+        .icon-idealism {
+            background-color: #1565c0;
+        }
+        .icon-fatalism {
+            background-color: #ff9800;
+        }
+        .icon-frameworks {
+            background-color: #7b1fa2;
+        }
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin: 10px 0 15px 25px;
+            color: #333;
+        }
+        .comparison-box {
+            display: flex;
+            margin-top: 15px;
+            background-color: rgba(255,255,255,0.7);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .comparison-side {
+            flex: 1;
+            padding: 12px;
+        }
+        .comparison-title {
+            font-weight: 600;
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        .title-left {
+            color: #d32f2f;
+        }
+        .title-right {
+            color: #1976d2;
+        }
+        .comparison-content {
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        .vs-divider {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.05), rgba(0,0,0,0.1), rgba(0,0,0,0.05));
+            padding: 0 12px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #555;
+        }
+        .comparison-list {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+        }
+        .comparison-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 6px;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        .comparison-list li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 7px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+        .left-list li::before {
+            background-color: #d32f2f;
+        }
+        .right-list li::before {
+            background-color: #1976d2;
+        }
+        .similarity-difference {
+            display: flex;
+            margin-top: 12px;
+        }
+        .sim-diff-column {
+            flex: 1;
+            padding: 10px;
+            border-radius: 6px;
+            margin: 0 5px;
+        }
+        .similarity {
+            background-color: rgba(76, 175, 80, 0.1);
+            border-left: 3px solid #4caf50;
+        }
+        .difference {
+            background-color: rgba(244, 67, 54, 0.1);
+            border-left: 3px solid #f44336;
+        }
+        .sim-diff-title {
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+        }
+        .sim-diff-icon {
+            margin-right: 8px;
+            font-size: 0.9rem;
+        }
+        .sim-diff-content {
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <h1 class="section-title">9. 哲学との響き合い：似ているところと違うところを探る</h1>
+        
+        <p class="intro-text">時間に関する新たな視点と、既存の哲学的概念との類似点や相違点を探りながら、より深い理解を目指します。</p>
+        
+        <div class="philosophy-grid">
+            <div class="philosophy-card eternalism">
+                <div class="philosophy-icon icon-eternalism">
+                    <i class="fas fa-infinity"></i>
+                </div>
+                <h2 class="card-title">永遠主義との響き合い</h2>
+                
+                <div class="card-content">
+                    <p><strong>永遠主義の視点：</strong>全ての時間（過去・現在・未来）が同じように本当に存在すると考え、よく「ブロック宇宙（時間の塊のような宇宙）」として説明される哲学の立場です。</p>
+                    
+                    <p style="font-style: italic; color: #555; margin: 10px 0;">
+                        「全てのものは同じ瞬間に存在しています。なぜなら、全ては同じ『今、ここ』にあるエネルギーのかけらによって作られているからです。だから本当は、『過去』も『未来』も存在しないのです。」
+                    </p>
+                    
+                    <div class="similarity-difference">
+                        <div class="sim-diff-column similarity">
+                            <div class="sim-diff-title">
+                                <span class="sim-diff-icon"><i class="fas fa-check-circle" style="color: #4caf50;"></i></span>
+                                類似点
+                            </div>
+                            <div class="sim-diff-content">
+                                過去、現在、未来を含む全ての瞬間が「今」の中に同時に存在するという考え方
+                            </div>
+                        </div>
+                        <div class="sim-diff-column difference">
+                            <div class="sim-diff-title">
+                                <span class="sim-diff-icon"><i class="fas fa-exclamation-circle" style="color: #f44336;"></i></span>
+                                相違点
+                            </div>
+                            <div class="sim-diff-content">
+                                永遠主義は時間の点が単に存在するとするのに対し、この見方では「今」が入り口となり、あなたの心が積極的に冒険する役割を持つ
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="philosophy-card idealism">
+                <div class="philosophy-icon icon-idealism">
+                    <i class="fas fa-balance-scale"></i>
+                </div>
+                <h2 class="card-title">理想論 vs. 物質論</h2>
+                
+                <div class="comparison-box">
+                    <div class="comparison-side">
+                        <div class="comparison-title title-left">
+                            <i class="fas fa-atom mr-2"></i> 物質論
+                        </div>
+                        <ul class="comparison-list left-list">
+                            <li>物質が全ての元となる本当の存在</li>
+                            <li>心は、物質が複雑に組み合わさって生まれる二次的なもの</li>
+                            <li>代表的な考え方：デモクリトス、ホッブス、マルクス</li>
+                        </ul>
+                    </div>
+                    <div class="vs-divider">VS</div>
+                    <div class="comparison-side">
+                        <div class="comparison-title title-right">
+                            <i class="fas fa-brain mr-2"></i> 理想論
+                        </div>
+                        <ul class="comparison-list right-list">
+                            <li>心や精神が全ての元となる本当の存在</li>
+                            <li>物質の世界は、心の投影、または心が映し出したもの</li>
+                            <li>代表的な考え方：プラトン、バークリー、ヘーゲル</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <p style="font-size: 0.95rem; margin-top: 10px;">
+                    心が全ての元であり、現実はその投影であるという「時間のしくみ」の考え方は、物質論よりも哲学的な理想論と明確に一致します。「プライム・ラディアント」という概念は、純粋な心が物質的な現実の元であることを示唆し、伝統的な理想論をさらに発展させたものと言えるでしょう。
+                </p>
+            </div>
+            
+            <div class="philosophy-card fatalism">
+                <div class="philosophy-icon icon-fatalism">
+                    <i class="fas fa-hands"></i>
+                </div>
+                <h2 class="card-title">運命論と自由な意志</h2>
+                
+                <div class="card-content">
+                    <p style="margin-bottom: 15px;"><strong>哲学的な謎：</strong>全ての現実や時間の流れがすでに存在するならば、一見すると運命が決まっているように思えます。しかし、意識的な心の状態（振動数）を変えることで、どのパラレルワールドを体験するかを選べるという視点は、新たな形の自由意志を示唆しています。</p>
+                    
+                    <div style="display: flex; align-items: center; justify-content: space-between; background-color: rgba(255,255,255,0.7); border-radius: 8px; padding: 10px; margin-top: 10px;">
+                        <div style="flex: 1; text-align: center; padding: 0 10px;">
+                            <div style="font-weight: 600; font-size: 1.05rem; color: #555; margin-bottom: 5px;">運命論の見方</div>
+                            <div style="font-size: 0.9rem;">全ての可能性がすでに存在する</div>
+                        </div>
+                        <div style="width: 2px; height: 50px; background-color: #ddd;"></div>
+                        <div style="flex: 1; text-align: center; padding: 0 10px;">
+                            <div style="font-weight: 600; font-size: 1.05rem; color: #03a9f4; margin-bottom: 5px;">自由意志の新解釈</div>
+                            <div style="font-size: 0.9rem;">どの可能性を体験するかを選べる</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="philosophy-card frameworks">
+                <div class="philosophy-icon icon-frameworks">
+                    <i class="fas fa-book"></i>
+                </div>
+                <h2 class="card-title">哲学の枠組みと現代的な解釈</h2>
+                
+                <div class="card-content">
+                    <p>時間に関する新しい視点は、古典的な哲学的問いに新たな解答を提供し、現代的な解釈を可能にします。</p>
+                    
+                    <div style="display: flex; margin-top: 15px;">
+                        <div style="flex: 1; padding: 10px; background-color: rgba(255,255,255,0.7); border-radius: 8px; margin-right: 10px;">
+                            <div style="font-weight: 600; margin-bottom: 5px; color: #7b1fa2;">古典的な問い</div>
+                            <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                                <li style="font-size: 0.9rem; margin-bottom: 5px;">• 存在とは何か</li>
+                                <li style="font-size: 0.9rem; margin-bottom: 5px;">• 現実はどのように認識されるか</li>
+                                <li style="font-size: 0.9rem;">• 人間の意識の本質とは</li>
+                            </ul>
+                        </div>
+                        <div style="flex: 1; padding: 10px; background-color: rgba(255,255,255,0.7); border-radius: 8px;">
+                            <div style="font-weight: 600; margin-bottom: 5px; color: #7b1fa2;">新たな視点</div>
+                            <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                                <li style="font-size: 0.9rem; margin-bottom: 5px;">• 心が現実を映し出す</li>
+                                <li style="font-size: 0.9rem; margin-bottom: 5px;">• 時間は体験を組織化する「思い込み」</li>
+                                <li style="font-size: 0.9rem;">• 意識は現実を選択する力を持つ</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

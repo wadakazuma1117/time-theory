@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>時間のしくみ - 目次</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            color: #333;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+
+            background-color: white;
+            padding: 40px 60px;
+        }
+        .title {
+            font-size: 48px;
+            font-weight: 700;
+            color: #3182ce;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+        }
+        .title:after {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(to right, #3182ce, #63b3ed);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+        .toc-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px 40px;
+        }
+        .toc-item {
+            display: flex;
+            align-items: baseline;
+            margin-bottom: 16px;
+            transition: all 0.3s ease;
+        }
+        .toc-item:hover {
+            transform: translateX(5px);
+        }
+        .toc-number {
+            font-size: 18px;
+            font-weight: 700;
+            color: #3182ce;
+            margin-right: 12px;
+            min-width: 30px;
+            text-align: right;
+        }
+        .toc-text {
+            font-size: 16px;
+            line-height: 1.4;
+        }
+        .section-divider {
+            width: 100%;
+            text-align: center;
+            margin: 20px 0;
+            color: #3182ce;
+            font-size: 12px;
+            letter-spacing: 4px;
+        }
+        .infinity-symbol {
+            font-size: 32px;
+            opacity: 0.1;
+            position: absolute;
+        }
+        .top-right {
+            top: 30px;
+            right: 60px;
+            color: #4299e1;
+        }
+        .bottom-left {
+            bottom: 30px;
+            left: 60px;
+            color: #805ad5;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="infinity-symbol top-right">∞</div>
+        <div class="infinity-symbol bottom-left">∞</div>
+        
+        <h1 class="title">目次</h1>
+        
+        <div class="toc-container">
+            <!-- 左列 -->
+            <div class="left-column">
+                <div class="toc-item">
+                    <div class="toc-number">1.</div>
+                    <div class="toc-text">はじめに: 時間のふしぎと基本的な考え方</div>
+                </div>
+                
+                <div class="toc-item">
+                    <div class="toc-number">2.</div>
+                    <div class="toc-text">時間に対する見方の転換</div>
+                </div>
+                
+                <div class="toc-item">
+                    <div class="toc-number">3.</div>
+                    <div class="toc-text">時間をバラバラにしてみよう：基本的なルール</div>
+                </div>
+                
+                <div class="toc-item">
+                    <div class="toc-number">4.</div>
+                    <div class="toc-text">永遠の「今」：全ての瞬間が同時に存在している</div>
+                </div>
+                
+                <div class="toc-item">
+                    <div class="toc-number">5.</div>
+                    <div class="toc-text">時間といろんな宇宙：パラレルワールドを冒険する</div>
+                </div>
+                
+                <div class="toc-item">
+                    <div class="toc-number">6.</div>
+                    <div class="toc-text">あなたの心は冒険家：周波数と選択で世界を移動する</div>
+                </div>
+                
+                <div class="toc-item">
+                    <div class="toc-number">7.</div>
+                    <div class="toc-text">映し出す宇宙：信じていることと感じ方が現実と時間を作り上げる</div>
+                </div>
+                
+                <div class="toc-item">
+                    <div class="toc-number">8.</div>
+                    <div class="toc-text">プライム・ラディアント：心と創造を結びつける粒子</div>
+                </div>
+                
+                <div class="toc-item">
+                    <div class="toc-number">9.</div>
+                    <div class="toc-text">哲学との響き合い：似ているところと違うところを探る</div>
+                </div>
+                
+                <div class="toc-item">
+                    <div class="toc-number">10.</div>
+                    <div class="toc-text">科学との響き合い：つながりと、たとえ話としての使い方</div>
+                </div>
+                
+                <div class="toc-item">
+                    <div class="toc-number">11.</div>
+                    <div class="toc-text">「今、この瞬間」の力を受け入れる</div>
+                </div>
+            </div>
+            
+            <!-- 右列 -->
+            <div class="right-column">
+                <div class="toc-item">
+                    <div class="toc-number">12.</div>
+                    <div class="toc-text">あなたの過去の物語を変える：「今」から「過去を変える」</div>
+                </div>
+                
+                <div class="toc-item">
+                    <div class="toc-number">13.</div>
+                    <div class="toc-text">望む現実を引き寄せる：望む時間の流れと心を合わせる</div>
+                </div>
+                
+                <div class="toc-item">
+                    <div class="toc-number">14.</div>
+                    <div class="toc-text">限界と怖れを乗り越える：自分自身が作った制限からの解放</div>
+                </div>
+                
+                <div class="toc-item">
+                    <div class="toc-number">15.</div>
+                    <div class="toc-text">実践的なまとめ：決まった時間の流れを超える生き方</div>
+                </div>
+                
+                <div class="toc-item">
+                    <div class="toc-number">16.</div>
+                    <div class="toc-text">時間の正体：大切なポイントのまとめ</div>
+                </div>
+                
+                <div class="toc-item">
+                    <div class="toc-number">17.</div>
+                    <div class="toc-text">考え方が変わる可能性</div>
+                </div>
+                
+                <div class="toc-item">
+                    <div class="toc-number">18.</div>
+                    <div class="toc-text">時間が「思い込み」であることの「目的」</div>
+                </div>
+                
+                <div class="toc-item">
+                    <div class="toc-number">19.</div>
+                    <div class="toc-text">時間のしくみ 実践応用編</div>
+                </div>
+                
+                <div class="toc-item">
+                    <div class="toc-number">20.</div>
+                    <div class="toc-text">内なる時間の歪みを活用する</div>
+                </div>
+                
+                <div class="toc-item">
+                    <div class="toc-number">21.</div>
+                    <div class="toc-text">ご質問と回答</div>
+                </div>
+                
+                <div class="toc-item">
+                    <div class="toc-number">22.</div>
+                    <div class="toc-text">最後に：時間の旅を続けるあなたへ</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

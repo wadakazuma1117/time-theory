@@ -1,0 +1,210 @@
+<html lang="ja"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>時間のしくみ - スライド23</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            color: #333;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+
+            background-color: white;
+            padding: 40px 60px;
+        }
+        .section-title {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        .subtitle {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #555;
+            margin-bottom: 30px;
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+        }
+        .qa-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 20px;
+        }
+        .qa-card {
+            background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(249,249,249,1) 100%);
+            border-radius: 15px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            padding: 25px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border-top: 4px solid #3498db;
+        }
+        .qa-card:nth-child(2) {
+            border-top-color: #9b59b6;
+        }
+        .qa-card:nth-child(3) {
+            border-top-color: #2ecc71;
+        }
+        .qa-card:nth-child(4) {
+            border-top-color: #e74c3c;
+        }
+        .qa-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .question {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2c3e50;
+            line-height: 1.4;
+        }
+        .question-icon {
+            background-color: #3498db;
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+        .qa-card:nth-child(2) .question-icon {
+            background-color: #9b59b6;
+        }
+        .qa-card:nth-child(3) .question-icon {
+            background-color: #2ecc71;
+        }
+        .qa-card:nth-child(4) .question-icon {
+            background-color: #e74c3c;
+        }
+        .answer {
+            margin-left: 40px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #555;
+        }
+        .answer p {
+            margin-bottom: 10px;
+        }
+        .answer p:last-child {
+            margin-bottom: 0;
+        }
+        .answer-highlight {
+            background-color: rgba(52, 152, 219, 0.1);
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        .qa-card:nth-child(2) .answer-highlight {
+            background-color: rgba(155, 89, 182, 0.1);
+        }
+        .qa-card:nth-child(3) .answer-highlight {
+            background-color: rgba(46, 204, 113, 0.1);
+        }
+        .qa-card:nth-child(4) .answer-highlight {
+            background-color: rgba(231, 76, 60, 0.1);
+        }
+        .note-container {
+            background: linear-gradient(45deg, #f6f9fc, #eef5fe);
+            border-radius: 12px;
+            padding: 20px 25px;
+            margin-top: 10px;
+            border-left: 5px solid #3498db;
+            display: flex;
+            align-items: center;
+        }
+        .note-icon {
+            font-size: 2rem;
+            color: #3498db;
+            margin-right: 20px;
+        }
+        .note-content {
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <h1 class="section-title">21. ご質問と回答</h1>
+        <p class="subtitle">時間の概念についてよくある質問をまとめました</p>
+        
+        <div class="qa-container">
+            <!-- 質問1 -->
+            <div class="qa-card">
+                <div class="question">
+                    <div class="question-icon"><i class="fas fa-question"></i></div>
+                    <div>時間が「思い込み」なら、なぜ私たちは全員同じ時間を体験するのですか？</div>
+                </div>
+                <div class="answer">
+                    <p>時計で測る「物理的な時間」を共有することで社会生活が可能になっていますが、実は一人ひとりの「心理的な時間」の体験は大きく異なります。</p>
+                    <p>同じ1時間でも、状況や心の状態によって<span class="answer-highlight">長く感じたり短く感じたり</span>します。また、私たちは「集合的な意識」として、似た振動状態の現実を共有しているため、基本的な時間の流れが共通して感じられるのです。</p>
+                </div>
+            </div>
+            
+            <!-- 質問2 -->
+            <div class="qa-card">
+                <div class="question">
+                    <div class="question-icon"><i class="fas fa-question"></i></div>
+                    <div>「永遠の今」を体験するには何から始めればいいですか？</div>
+                </div>
+                <div class="answer">
+                    <p>最も簡単な方法は、定期的に（例えば1時間に1回）すべての活動を一時停止し、深く呼吸をしながら「今この瞬間」に完全に注意を向けることです。</p>
+                    <p>五感を通して周囲を観察し、思考や判断を手放します。また、<span class="answer-highlight">日々の活動を「初めて経験するかのように」行うこと</span>も効果的です。瞑想やマインドフルネスの練習も「永遠の今」への入り口となります。</p>
+                </div>
+            </div>
+            
+            <!-- 質問3 -->
+            <div class="qa-card">
+                <div class="question">
+                    <div class="question-icon"><i class="fas fa-question"></i></div>
+                    <div>過去を変えられるなら、タイムパラドックスは起きないのですか？</div>
+                </div>
+                <div class="answer">
+                    <p>伝統的なタイムトラベルの概念とは異なり、ここでいう「過去を変える」とは、<span class="answer-highlight">異なるパラレルワールドの流れに移行すること</span>を意味します。</p>
+                    <p>過去の出来事自体を変えるのではなく、現在の心の状態を変えることで、違う「過去」を持つパラレルワールドに周波数を合わせるのです。そのため、従来のSF作品で語られるようなパラドックスは発生しません。</p>
+                </div>
+            </div>
+            
+            <!-- 質問4 -->
+            <div class="qa-card">
+                <div class="question">
+                    <div class="question-icon"><i class="fas fa-question"></i></div>
+                    <div>望む現実を引き寄せるのに失敗した場合はどうすればいいですか？</div>
+                </div>
+                <div class="answer">
+                    <p>「失敗」という概念自体が、特定の結果への執着から生まれます。<span class="answer-highlight">プロセスに集中し、結果への執着を手放すこと</span>が重要です。</p>
+                    <p>また、自分の「本当の望み」と「思っている望み」の違いを見つめ直してみましょう。時に私たちの心の深い部分は、表面的な願望とは異なる方向に導こうとしています。それに気づくことが、真の引き寄せへの鍵となります。</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="note-container">
+            <div class="note-icon">
+                <i class="fas fa-lightbulb"></i>
+            </div>
+            <div class="note-content">
+                これらの質問は、時間の概念を従来の理解から新しい視点へと移行する過程で生じる自然な疑問です。答えを知的に理解するだけでなく、日々の生活の中で体験的に検証してみることが、時間の本質を深く理解する鍵となります。
+            </div>
+        </div>
+    </div>
+
+    </body></html>

@@ -1,0 +1,268 @@
+<html lang="ja"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>時間のしくみ - スライド21</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            color: #333;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+
+            background-color: white;
+            padding: 40px 60px;
+        }
+        .section-title {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        .subtitle {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #555;
+            margin-bottom: 30px;
+            border-left: 4px solid #5dade2;
+            padding-left: 15px;
+        }
+        .practice-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+        .practice-card {
+            background-color: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .practice-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(0,0,0,0.05);
+        }
+        .card-icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 1.5rem;
+        }
+        .morning-icon {
+            background-color: #fff4e6;
+            color: #fd7e14;
+        }
+        .present-icon {
+            background-color: #e3fafc;
+            color: #0c8599;
+        }
+        .past-icon {
+            background-color: #f3f0ff;
+            color: #7950f2;
+        }
+        .future-icon {
+            background-color: #ebfbee;
+            color: #2b8a3e;
+        }
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        .practice-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .practice-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            padding-left: 12px;
+            position: relative;
+        }
+        .practice-item:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 9px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: #5dade2;
+        }
+        .practice-name {
+            font-weight: 500;
+            margin-right: 8px;
+        }
+        .practice-desc {
+            font-size: 0.9rem;
+            color: #555;
+            flex: 1;
+        }
+        .tip-banner {
+            background: linear-gradient(to right, #f1f9ff, #e1f5fe);
+            border-radius: 12px;
+            padding: 18px 25px;
+            display: flex;
+            align-items: center;
+            border-left: 5px solid #5dade2;
+        }
+        .tip-icon {
+            font-size: 2rem;
+            color: #5dade2;
+            margin-right: 20px;
+        }
+        .tip-content {
+            flex: 1;
+        }
+        .tip-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #2980b9;
+        }
+        .tip-text {
+            font-size: 0.95rem;
+            color: #444;
+            line-height: 1.5;
+        }
+        .quote {
+            font-style: italic;
+            color: #555;
+            border-left: 3px solid #ddd;
+            padding-left: 12px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <h1 class="section-title">19. 時間のしくみ 実践応用編</h1>
+        <p class="subtitle">日常での活用法：時間の幻想から解放されるために</p>
+        
+        <div class="practice-grid">
+            <!-- 朝の瞑想習慣 -->
+            <div class="practice-card">
+                <div class="card-header">
+                    <div class="card-icon morning-icon">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <h3 class="card-title">朝の瞑想習慣</h3>
+                </div>
+                <ul class="practice-list">
+                    <li class="practice-item">
+                        <span class="practice-desc">5分間の呼吸瞑想：朝起きてすぐ、座って呼吸に集中し、「今」だけに意識を向ける</span>
+                    </li>
+                    <li class="practice-item">
+                        <span class="practice-desc">心の観察：思考をただ流れていくものとして観察し、時間の「思い込み」に気づく</span>
+                    </li>
+                </ul>
+                <p class="quote">「朝の最初の時間の使い方が、一日の時間体験を形作ります」</p>
+            </div>
+            
+            <!-- 「今」に意識を向けるための小さな実践 -->
+            <div class="practice-card">
+                <div class="card-header">
+                    <div class="card-icon present-icon">
+                        <i class="fas fa-hourglass-half"></i>
+                    </div>
+                    <h3 class="card-title">「今」に意識を向けるための小さな実践</h3>
+                </div>
+                <ul class="practice-list">
+                    <li class="practice-item">
+                        <span class="practice-desc">マイクロブレイク：日中に30秒の「時間停止」を設け、存在と呼吸だけに集中する</span>
+                    </li>
+                    <li class="practice-item">
+                        <span class="practice-desc">意識的な行動：日常の動作（歩く、食べる、手を洗うなど）を完全な意識を持って行う</span>
+                    </li>
+                    <li class="practice-item">
+                        <span class="practice-desc">心身の感覚：体の感覚に意識を向け、純粋な「今」の感覚に浸る</span>
+                    </li>
+                    <li class="practice-item">
+                        <span class="practice-desc">ベル・オブ・マインドフルネス：特定の合図をトリガーに「今」に戻る</span>
+                    </li>
+                </ul>
+                <p class="quote">「続けて集中するのではなく、何度も『今』に戻ることが大切です」</p>
+            </div>
+            
+            <!-- 過去の記憶の再解釈 -->
+            <div class="practice-card">
+                <div class="card-header">
+                    <div class="card-icon past-icon">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <h3 class="card-title">過去の記憶の再解釈</h3>
+                </div>
+                <ul class="practice-list">
+                    <li class="practice-item">
+                        <span class="practice-desc">記憶日記：過去の出来事を新しい視点で書き直す習慣をつける</span>
+                    </li>
+                    <li class="practice-item">
+                        <span class="practice-desc">感謝の再フレーム：過去の困難な経験を、学びと成長の機会として再解釈する</span>
+                    </li>
+                    <li class="practice-item">
+                        <span class="practice-desc">物語の変更：自分の人生の物語を意識的に書き換え、新しい意味を与える</span>
+                    </li>
+                </ul>
+                <p class="quote">「過去は決まったものではなく、現在の意識状態から常に作り直されています」</p>
+            </div>
+            
+            <!-- 未来への不安を手放す方法 -->
+            <div class="practice-card">
+                <div class="card-header">
+                    <div class="card-icon future-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="card-title">未来への不安を手放す方法</h3>
+                </div>
+                <ul class="practice-list">
+                    <li class="practice-item">
+                        <span class="practice-desc">不安の観察：未来への不安を判断せず、ただ観察し、その本質を理解する</span>
+                    </li>
+                    <li class="practice-item">
+                        <span class="practice-desc">信頼の練習：「今」を完全に信頼し、最適な未来が自然に展開することを受け入れる</span>
+                    </li>
+                    <li class="practice-item">
+                        <span class="practice-desc">可能性の拡大：単一の未来ではなく、無数のパラレルな可能性を意識する</span>
+                    </li>
+                </ul>
+                <p class="quote">「未来の不安は、未来が固定されているという誤解から生まれます」</p>
+            </div>
+        </div>
+        
+        <!-- 実践のコツ -->
+        <div class="tip-banner">
+            <div class="tip-icon">
+                <i class="fas fa-lightbulb"></i>
+            </div>
+            <div class="tip-content">
+                <h3 class="tip-title">実践のコツ</h3>
+                <p class="tip-text">小さく始め、継続することが大切です。「完璧」を目指すのではなく、意識を向けることそのものに価値があります。これらの実践を日常に組み込むことで、時間の「思い込み」から徐々に解放され、より深い「今」の体験へと進むことができます。</p>
+            </div>
+        </div>
+    </div>
+
+    </body></html>

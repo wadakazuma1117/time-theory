@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>時間のしくみ - スライド17</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            color: #333;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+
+            background-color: white;
+            padding: 40px 60px;
+        }
+        .section-title {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        .subtitle {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #555;
+            margin-bottom: 35px;
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+        }
+        .key-points-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        .point-card {
+            background: linear-gradient(to bottom right, #ffffff, #f8f9fa);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.07);
+            display: flex;
+            position: relative;
+            overflow: hidden;
+        }
+        .point-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 6px;
+            height: 100%;
+            background-color: var(--accent-color);
+        }
+        .point-icon {
+            font-size: 2.5rem;
+            margin-right: 25px;
+            color: var(--accent-color);
+            flex-shrink: 0;
+        }
+        .point-content {
+            flex-grow: 1;
+        }
+        .point-number {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #7f8c8d;
+            margin-bottom: 5px;
+            display: block;
+            text-transform: uppercase;
+        }
+        .point-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+        .point-desc {
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #555;
+        }
+        .point-keywords {
+            margin-top: 12px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .keyword {
+            background-color: rgba(0,0,0,0.05);
+            border-radius: 15px;
+            padding: 5px 12px;
+            font-size: 0.8rem;
+            color: var(--accent-color);
+            font-weight: 500;
+        }
+        .footnote {
+            position: absolute;
+            bottom: 40px;
+            left: 60px;
+            right: 60px;
+            text-align: center;
+            font-size: 1.1rem;
+            color: #34495e;
+            font-style: italic;
+        }
+        .accent-blue { --accent-color: #3498db; }
+        .accent-purple { --accent-color: #9b59b6; }
+        .accent-orange { --accent-color: #e67e22; }
+        .accent-green { --accent-color: #2ecc71; }
+        .accent-red { --accent-color: #e74c3c; }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <h1 class="section-title">16. 時間の正体：大切なポイントのまとめ</h1>
+        
+        <p class="subtitle">これまでお話ししてきた時間に関する重要な概念の総括</p>
+        
+        <div class="text-xl font-medium mb-6 text-gray-700">時間の本質に関する5つの重要なポイント</div>
+        
+        <div class="key-points-grid">
+            <!-- Point 1 -->
+            <div class="point-card accent-blue">
+                <div class="point-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <div class="point-content">
+                    <span class="point-number">ポイント 1</span>
+                    <h3 class="point-title">思い込みとしての時間</h3>
+                    <p class="point-desc">
+                        時間と空間は、あなたの心によって映し出された「思い込み」です。現実は、瞬間ごとに新しく作り直される現象を体験しています。これは私たちがこの3次元の現実という「ゲーム」を体験するために作られた仕組みなのです。
+                    </p>
+                    <div class="point-keywords">
+                        <span class="keyword">映し出し</span>
+                        <span class="keyword">思い込み</span>
+                        <span class="keyword">経験の枠組み</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Point 2 -->
+            <div class="point-card accent-purple">
+                <div class="point-icon">
+                    <i class="fas fa-infinity"></i>
+                </div>
+                <div class="point-content">
+                    <span class="point-number">ポイント 2</span>
+                    <h3 class="point-title">永遠の「今」</h3>
+                    <p class="point-desc">
+                        過去・現在・未来を含む全ての時間が、永遠の「今」に同時に存在しています。過去は現在の瞬間から作られ、未来は可能性の集まりとして既に存在しています。「過去」「未来」という概念は、永遠の「今」の中での心の移動によって生まれる錯覚なのです。
+                    </p>
+                    <div class="point-keywords">
+                        <span class="keyword">永遠の現在</span>
+                        <span class="keyword">同時存在</span>
+                        <span class="keyword">心の移動</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Point 3 -->
+            <div class="point-card accent-orange">
+                <div class="point-icon">
+                    <i class="fas fa-sync-alt"></i>
+                </div>
+                <div class="point-content">
+                    <span class="point-number">ポイント 3</span>
+                    <h3 class="point-title">絶え間ない作り直し</h3>
+                    <p class="point-desc">
+                        現実はプランク時間というものすごく速いスピードで、「1秒間に何十億回も」絶え間なく新しく作り直されます。何もない状態（ゼロポイント）への崩壊と完全な作り直しの繰り返しが、連続した現実という錯覚を生み出しています。
+                    </p>
+                    <div class="point-keywords">
+                        <span class="keyword">瞬間的更新</span>
+                        <span class="keyword">ゼロポイント</span>
+                        <span class="keyword">映画のフレーム</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Point 4 -->
+            <div class="point-card accent-green">
+                <div class="point-icon">
+                    <i class="fas fa-project-diagram"></i>
+                </div>
+                <div class="point-content">
+                    <span class="point-number">ポイント 4</span>
+                    <h3 class="point-title">パラレルワールドの存在</h3>
+                    <p class="point-desc">
+                        無限の数のパラレルワールド（「もしもの地球」）が同時に存在しています。あなたの心がこれらのコマ（フレーム）を移動することで、一貫した時間の流れを体験します。各パラレルワールドは心の状態（振動周波数）によって隔てられています。
+                    </p>
+                    <div class="point-keywords">
+                        <span class="keyword">無限の可能性</span>
+                        <span class="keyword">周波数の違い</span>
+                        <span class="keyword">心による選択</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Point 5 -->
+            <div class="point-card accent-red">
+                <div class="point-icon">
+                    <i class="fas fa-hand-sparkles"></i>
+                </div>
+                <div class="point-content">
+                    <span class="point-number">ポイント 5</span>
+                    <h3 class="point-title">あなたの心の創造力</h3>
+                    <p class="point-desc">
+                        あなたは単なる観察者ではなく、積極的な創造者です。あなたの心の状態（振動周波数）が、あなたが体験する現実の質を決定づけています。信じていること、感情、思考のパターンを変えることで、あなたは文字通り違う「地球」へと移動することができるのです。
+                    </p>
+                    <div class="point-keywords">
+                        <span class="keyword">創造的意識</span>
+                        <span class="keyword">現実の選択</span>
+                        <span class="keyword">振動の共鳴</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footnote">
+            「時間の本質を理解することは、あなた自身の創造力の真の可能性を開くための扉です」
+        </div>
+    </div>
+</body>
+</html>

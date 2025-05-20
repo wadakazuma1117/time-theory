@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>時間のしくみ - スライド3</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            color: #333;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+
+            background-color: white;
+            padding: 40px 60px;
+        }
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #3182ce;
+            margin-bottom: 30px;
+        }
+        .intro-text {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        .comparison-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        .time-view {
+            width: 48%;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .time-view-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .time-view-item {
+            margin-bottom: 15px;
+            padding: 12px;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.85);
+        }
+        .time-view-item-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+        .time-view-item-desc {
+            font-size: 0.9rem;
+            color: #4a5568;
+        }
+        .traditional {
+            background-color: #fef3c7;
+        }
+        .new {
+            background-color: #dbeafe;
+        }
+        .changes-section {
+            margin-top: 30px;
+        }
+        .changes-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #4b5563;
+            margin-bottom: 15px;
+        }
+        .changes-container {
+            display: flex;
+            justify-content: space-between;
+        }
+        .change-item {
+            width: 31%;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: #f0f9ff;
+            border-left: 5px solid #60a5fa;
+        }
+        .change-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #2563eb;
+            margin-bottom: 8px;
+        }
+        .change-desc {
+            font-size: 0.9rem;
+            color: #4b5563;
+        }
+        .footer-note {
+            margin-top: 25px;
+            text-align: center;
+            font-style: italic;
+            color: #6b7280;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <h1 class="section-title">2. 時間に対する見方の転換</h1>
+        
+        <p class="intro-text">私たちの時間に対する捉え方が変わることで、人生観そのものも大きく変容していきます。従来の時間の見方と、新しい時間の見方を比較してみましょう。</p>
+        
+        <div class="comparison-container">
+            <div class="time-view traditional">
+                <div class="time-view-title">
+                    <i class="fas fa-history mr-3 text-yellow-700"></i>
+                    従来の時間のイメージ
+                </div>
+                
+                <div class="time-view-item">
+                    <div class="time-view-item-title">
+                        <i class="fas fa-hourglass-end mr-2 text-red-600"></i>
+                        時間は限られたリソース
+                    </div>
+                    <div class="time-view-item-desc">どんどん失われていく有限なもの</div>
+                </div>
+                
+                <div class="time-view-item">
+                    <div class="time-view-item-title">
+                        <i class="fas fa-long-arrow-alt-right mr-2 text-red-600"></i>
+                        時間は一方通行の流れ
+                    </div>
+                    <div class="time-view-item-desc">過去から未来へと不可逆的に進む絶対的な流れ</div>
+                </div>
+                
+                <div class="time-view-item">
+                    <div class="time-view-item-title">
+                        <i class="fas fa-user-clock mr-2 text-red-600"></i>
+                        私たちは時間に支配される存在
+                    </div>
+                    <div class="time-view-item-desc">時間の制約の中で生きる無力な存在</div>
+                </div>
+                
+                <div class="time-view-item">
+                    <div class="time-view-item-title">
+                        <i class="fas fa-lock mr-2 text-red-600"></i>
+                        過去は変えられない固定されたもの
+                    </div>
+                    <div class="time-view-item-desc">完全に決定され、変更不可能な記録</div>
+                </div>
+                
+                <div class="time-view-item">
+                    <div class="time-view-item-title">
+                        <i class="fas fa-road mr-2 text-red-600"></i>
+                        未来は不確実だが一本道
+                    </div>
+                    <div class="time-view-item-desc">まだ決まっていないが単一の結果に向かう</div>
+                </div>
+            </div>
+            
+            <div class="time-view new">
+                <div class="time-view-title">
+                    <i class="fas fa-infinity mr-3 text-blue-700"></i>
+                    新しい時間のイメージ
+                </div>
+                
+                <div class="time-view-item">
+                    <div class="time-view-item-title">
+                        <i class="fas fa-brain mr-2 text-blue-600"></i>
+                        時間は心が作り出す思い込み
+                    </div>
+                    <div class="time-view-item-desc">心によって映し出される主観的な現象</div>
+                </div>
+                
+                <div class="time-view-item">
+                    <div class="time-view-item-title">
+                        <i class="fas fa-star-of-life mr-2 text-blue-600"></i>
+                        「今」には無限の可能性が同時に存在
+                    </div>
+                    <div class="time-view-item-desc">全ての時間は「永遠の今」の中に共存している</div>
+                </div>
+                
+                <div class="time-view-item">
+                    <div class="time-view-item-title">
+                        <i class="fas fa-paint-brush mr-2 text-blue-600"></i>
+                        私たちは時間を創造する存在
+                    </div>
+                    <div class="time-view-item-desc">心の状態によって時間の体験を生み出している</div>
+                </div>
+                
+                <div class="time-view-item">
+                    <div class="time-view-item-title">
+                        <i class="fas fa-sync-alt mr-2 text-blue-600"></i>
+                        過去は現在の瞬間から絶えず作り直される
+                    </div>
+                    <div class="time-view-item-desc">今の心の状態によって常に新しく解釈される</div>
+                </div>
+                
+                <div class="time-view-item">
+                    <div class="time-view-item-title">
+                        <i class="fas fa-project-diagram mr-2 text-blue-600"></i>
+                        無限のパラレルワールドが同時に存在
+                    </div>
+                    <div class="time-view-item-desc">全ての可能性が異なる振動数の現実として存在</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="changes-section">
+            <h3 class="changes-title">時間の見方が変わると何が変わるのか</h3>
+            
+            <div class="changes-container">
+                <div class="change-item">
+                    <div class="change-title">心の解放</div>
+                    <div class="change-desc">時間の制約や過去への執着、未来への不安から解放され、より自由に生きられるようになります</div>
+                </div>
+                
+                <div class="change-item">
+                    <div class="change-title">創造力の拡大</div>
+                    <div class="change-desc">「今」の中に無限の可能性を見出し、自分の現実を意識的に創造できるようになります</div>
+                </div>
+                
+                <div class="change-item">
+                    <div class="change-title">人生の意味の転換</div>
+                    <div class="change-desc">人生の目的が「何かを達成すること」から「心の状態を拡大すること」へと変わります</div>
+                </div>
+            </div>
+        </div>
+        
+        <p class="footer-note">時間に対する考え方を変えることは、ただ面白いだけでなく、私たちの生き方そのものを根本から変える力を持っています。</p>
+    </div>
+</body>
+</html>
